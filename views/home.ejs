@@ -1,0 +1,14 @@
+<%- include('partials/header')-%>
+<h1>Home</h1>
+<p><%=hcontent%></p>
+<br>
+<br>
+<%for(var i = 0 ; i < postList.length ; i++){%>
+    <h3><%=postList[i].Title%></h3>
+    <p>
+        <%=postList[i].Content.substring(0 , 100) + "..."%>
+        <a href="/posts/<%=postList[i].Title%>">Read More</a>
+    </p>
+<%}%>
+
+<%- include('partials/footer')-%>
